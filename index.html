@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>급식정보 조회</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 급식정보 조회</h1>
+            <p>원하는 날짜를 선택하여 급식정보를 확인하세요</p>
+        </header>
+
+        <main>
+            <div class="search-section">
+                <div class="date-input">
+                    <label for="dateInput">날짜 선택:</label>
+                    <input type="date" id="dateInput" name="dateInput">
+                    <button id="searchBtn" class="search-btn">조회하기</button>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>급식정보를 불러오는 중...</p>
+                </div>
+                
+                <div class="meal-info" id="mealInfo" style="display: none;">
+                    <h2 id="mealDate"></h2>
+                    <div class="meal-content">
+                        <div class="meal-type">
+                            <h3>🍚 중식</h3>
+                            <div class="meal-items" id="lunchItems"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-data" id="noData" style="display: none;">
+                    <p>해당 날짜의 급식정보가 없습니다.</p>
+                </div>
+
+                <div class="error" id="error" style="display: none;">
+                    <p>급식정보를 불러오는 중 오류가 발생했습니다.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 급식정보 조회 서비스</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
